@@ -17,7 +17,7 @@ Contains payment information.
 
 Columns: id, order_id (refers to raw_orders.id), payment_method, amount
 
-Steps
+## Steps
 
 ## 1. Data Loading
 Load the three CSV files into Spark DataFrames.
@@ -46,9 +46,6 @@ Utilize broadcast joins if one of the tables is small (e.g., raw_customers.csv).
 Avoid unnecessary shuffling and apply partitioning for performance optimization.
 Ensure the use of Spark SQL functions for efficient transformations.
 
-## Bonus Task (Optional)
+## Bonus Task
 Write a PySpark SQL query to find the top 5 customers by total spending and save the result as a Parquet file.
-Deliverables
-Python code (script or Jupyter notebook) with loading, transformation, and saving steps.
-Clear comments and code organization.
-README file explaining your approach.
+
