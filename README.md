@@ -26,25 +26,23 @@ Handle missing or invalid data (e.g., drop rows or fill with default values).
 Log or print a summary of the dataset (e.g., number of records, distinct users, etc.).
 
 ## 2. Data Transformation
-Join the Datasets
+# Join the Datasets
 Join raw_orders.csv with raw_customers.csv on the user_id field.
 Join the resulting DataFrame with raw_payments.csv on order_id.
-Perform the Following Transformations
+
+# Perform the Following Transformations
 Calculate the total spent by each customer (sum of amount from raw_payments.csv).
 Add a new column to indicate whether a customer has placed more than one order.
 Filter the orders to include only completed orders (from raw_orders.csv).
-Extra Transformation
+
+# Extra Transformation
 Create a new column full_name by combining first_name and last_name.
 Filter customers who spent more than a specified amount (e.g., > 500).
 
 ## 3. Data Saving
 Save the final transformed DataFrame to Parquet format, partitioned by order_date.
 Ensure efficient querying by optimizing partitioning and using the appropriate file format for analytics (e.g., Parquet).
-Efficiency Considerations
-Use Spark caching/persisting for intermediate DataFrames if necessary.
-Utilize broadcast joins if one of the tables is small (e.g., raw_customers.csv).
-Avoid unnecessary shuffling and apply partitioning for performance optimization.
-Ensure the use of Spark SQL functions for efficient transformations.
+
 
 ## Bonus Task
 Write a PySpark SQL query to find the top 5 customers by total spending and save the result as a Parquet file.
