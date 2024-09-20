@@ -1,4 +1,4 @@
-##Task: Data Loading and Transformation with Apache Spark
+## Task: Data Loading and Transformation with Apache Spark
 Scenario
 You are tasked with loading customer, order, and payment data, performing transformations to create meaningful insights, and saving the transformed data back for reporting purposes. The focus is on efficient coding and applying best practices in Spark for handling large datasets.
 
